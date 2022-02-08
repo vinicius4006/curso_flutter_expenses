@@ -13,8 +13,17 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text("Despesas Pessoais"),
+        actions: <Widget>[
+          IconButton(
+            onPressed: (){}, 
+            icon: Icon(Icons.add))
+        ],
       ),
       body: SingleChildScrollView(child: BodyPage()),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){}, 
+        child: Icon(Icons.add)),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
