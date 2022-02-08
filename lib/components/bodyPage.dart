@@ -1,4 +1,4 @@
-import 'package:expenses/bodyMyHomePage/graphicCard.dart';
+import 'package:expenses/components/graphicCard.dart';
 import 'package:flutter/material.dart';
 
 import '../models/transaction.dart';

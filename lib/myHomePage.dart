@@ -1,4 +1,4 @@
-import 'package:expenses/bodyMyHomePage/bodyPage.dart';
+import 'package:expenses/components/bodyPage.dart';
 import 'package:expenses/models/transaction.dart';
 import 'package:flutter/material.dart';
 
