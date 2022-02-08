@@ -14,7 +14,7 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
         title: Text("Despesas Pessoais"),
       ),
-      body: BodyPage(),
+      body: SingleChildScrollView(child: BodyPage()),
     );
   }
 }
