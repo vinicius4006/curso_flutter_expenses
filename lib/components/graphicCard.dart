@@ -10,11 +10,11 @@ class GraphicCard extends StatelessWidget {
   //const GraphicCard({ Key? key, String? texto, }) : super(key: key);
 
   String? texto;
-  Color? color;
+  
   double preco;
   DateTime time;
 
-  GraphicCard({required this.texto, required this.color, required this.preco, required this.time});
+  GraphicCard({required this.texto, required this.preco, required this.time});
 
   @override
   Widget build(BuildContext context) {
