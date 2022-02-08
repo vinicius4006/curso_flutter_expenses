@@ -40,6 +40,8 @@ final _transactions = [
     setState(() {
       _transactions.add(newTransaction);
     });
+
+    //Navigator.of(context);
    }
 
   _openTransactionFormModal(BuildContext context){
