@@ -19,8 +19,8 @@ class BodyPage extends StatelessWidget {
     ),
     Transaction(
       id: "t2",
-      title: "Conta de Luz",
-      value: 211.3,
+      title: "Internet",
+      value: 65.0,
       date: DateTime.now(),
     ),
     Transaction(
