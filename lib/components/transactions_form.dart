@@ -12,7 +12,6 @@ class TransactionForm extends StatefulWidget {
 class _TransactionFormState extends State<TransactionForm> {
   //const TransactionForm({ Key? key }) : super(key: key);
     final titleController = TextEditingController();
-
     final valueController = TextEditingController();
 
    _submitForm() {
