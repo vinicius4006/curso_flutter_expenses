@@ -14,20 +14,34 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   //const MyHomePage({ Key? key }) : super(key: key);
 final List<Transaction>_transactions = [
-    //Transaction(
-    //  id: "t1",
-    //  title: "Novo Tênis de Corrida",
-    //  value: 100.0,
-    //  date: DateTime.now(),
-   // ),
-    //Transaction(
-   //   id: "t2",
-    //  title: "Internet",
-    //  value: 605.90,
-    //  date: DateTime.now(),
-    //),
+    Transaction(
+      id: "t0",
+      title: "Conta Antiga",
+      value: 400.0,
+      date: DateTime.now().subtract(const Duration(days: 33)),
+    ),
+    Transaction(
+      id: "t1",
+      title: "Novo Tênis de Corrida",
+      value: 100.0,
+      date: DateTime.now().subtract(const Duration(days: 3)),
+    ),
+    Transaction(
+      id: "t2",
+      title: "Internet",
+      value: 605.90,
+      date: DateTime.now().subtract(Duration(days: 4)),
+    ),
     
   ];
+
+  List<Transaction> get _recentTransactions {
+    return _transactions.where((tr) {
+      return tr.date.isAfter(DateTime.now().subtract(
+        Duration(days: 7)),
+        );
+    }).toList();
+  }
 
    _addTransactions(String title, double value){
     final newTransaction = Transaction(
@@ -67,7 +81,7 @@ final List<Transaction>_transactions = [
             icon: Icon(Icons.add))
         ],
       ),
-      body: SingleChildScrollView(child: BodyPage(_transactions)),
+      body: SingleChildScrollView(child: BodyPage(_transactions, _recentTransactions)),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _openTransactionFormModal(context), 
         child: Icon(Icons.add)),
