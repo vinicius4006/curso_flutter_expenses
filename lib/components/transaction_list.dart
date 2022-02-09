@@ -36,7 +36,7 @@ class TransactionList extends StatelessWidget {
         itemCount: transactions.length,
         itemBuilder: (ctx, index){
           final tr = transactions[index];
-                    return GraphicCard(texto: tr.title, preco: tr.value,time: DateTime.now());
+                    return GraphicCard(texto: tr.title, preco: tr.value,time: tr.date);
         },
                      
       ),

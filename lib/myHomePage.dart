@@ -18,13 +18,13 @@ final List<Transaction>_transactions = [
       id: "t0",
       title: "Conta Antiga",
       value: 400.0,
-      date: DateTime.now().subtract(const Duration(days: 33)),
+      date: DateTime.now().subtract(Duration(days: 33)),
     ),
     Transaction(
       id: "t1",
       title: "Novo Tênis de Corrida",
       value: 100.0,
-      date: DateTime.now().subtract(const Duration(days: 3)),
+      date: DateTime.now().subtract(Duration(days: 2)),
     ),
     Transaction(
       id: "t2",
@@ -34,6 +34,7 @@ final List<Transaction>_transactions = [
     ),
     
   ];
+  
 
   List<Transaction> get _recentTransactions {
     return _transactions.where((tr) {
@@ -56,6 +57,7 @@ final List<Transaction>_transactions = [
     });
 
     Navigator.of(context).pop();
+    
    }
 
   _openTransactionFormModal(BuildContext context){
