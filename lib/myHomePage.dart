@@ -41,7 +41,7 @@ final _transactions = [
       _transactions.add(newTransaction);
     });
 
-    //Navigator.of(context);
+    Navigator.of(context).pop();
    }
 
   _openTransactionFormModal(BuildContext context){
@@ -58,7 +58,9 @@ final _transactions = [
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Despesas Pessoais"),
+        title: Text(
+          "Despesas Pessoais",
+          ),
         actions: <Widget>[
           IconButton(
             onPressed: () => _openTransactionFormModal(context), 

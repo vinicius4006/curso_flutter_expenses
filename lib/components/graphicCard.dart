@@ -32,12 +32,12 @@ class GraphicCard extends StatelessWidget {
             decoration: BoxDecoration(
              border: Border.all(
                width: 2,
-               color: Color.fromRGBO(128, 0, 128, 0.7),
+               color: Theme.of(context).primaryColor,
              ),
                       
             ),
             child: Text("R\$ "+preco.toStringAsFixed(2),
-            style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold, fontSize: 20),),
+            style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold, fontSize: 20),),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

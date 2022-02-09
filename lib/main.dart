@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:expenses/myHomePage.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +13,17 @@ class ExpensesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.purple,
-    )
+          fontFamily: "Quicksand",
+          appBarTheme: AppBarTheme(
+           titleTextStyle: TextStyle(
+             fontSize: 20,
+             fontFamily: "OpenSans",
+             fontWeight: FontWeight.w700),
+          )
+          //accentColor: Colors.amber, depreciado
       ),
-      debugShowCheckedModeBanner: false,
+      //debugShowCheckedModeBanner: false,
       home: MyHomePage(),
       
       );
