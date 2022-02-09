@@ -23,7 +23,7 @@ final _transactions = [
     Transaction(
       id: "t2",
       title: "Internet",
-      value: 65.0,
+      value: 605.90,
       date: DateTime.now(),
     ),
     

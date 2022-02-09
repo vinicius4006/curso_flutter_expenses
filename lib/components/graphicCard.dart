@@ -36,15 +36,24 @@ class GraphicCard extends StatelessWidget {
              ),
                       
             ),
-            child: Text("R\$ "+preco.toStringAsFixed(2),
-            style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold, fontSize: 20),),
+            child: Text(
+              "R\$ "+preco.toStringAsFixed(2),
+            style: TextStyle(
+              color: Theme.of(context).primaryColor, 
+              fontWeight: FontWeight.bold, 
+              fontSize: 20),
+              
+              ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(texto.toString(), style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16),),
+              Text(
+                texto.toString(), 
+                style: Theme.of(context).textTheme.headline6,
+                ),
+
+
               Text(DateFormat('d MMM y').format(time), style: TextStyle(color: Colors.grey),),
             ],
           ),
