@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class NewGraphicCard extends StatelessWidget {
-  //const NewGraphicCard({ Key? key }) : super(key: key);
+  //const NewGraphicCard({ onlyId? onlyId }) : super(onlyId: onlyId);
 
   String texto;
+  String onlyId;
   double preco;
   DateTime time;
+  final void Function(String) delete;
 
-  NewGraphicCard({required this.texto, required this.preco, required this.time});
+  NewGraphicCard({required this.texto, required this.onlyId,required this.preco, required this.time, required this.delete});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class NewGraphicCard extends StatelessWidget {
                         subtitle: Text(
                           DateFormat('d MMM y').format(time),
                         ),
-                        
+                        trailing: IconButton(onPressed: () => delete(onlyId), icon: Icon(Icons.delete_sweep_sharp, color: Colors.redAccent,)),
                       ),
                     );
   }

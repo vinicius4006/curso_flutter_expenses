@@ -10,7 +10,9 @@ class TransactionList extends StatelessWidget {
 
   final List<Transaction> transactions;
 
-  TransactionList(this.transactions);
+  final void Function(String) deleteTransaction;
+
+  TransactionList(this.transactions, this.deleteTransaction);
   
 
   @override
@@ -40,7 +42,7 @@ class TransactionList extends StatelessWidget {
         //reverse: transactions.length > 3,
         itemBuilder: (ctx, index){
           final tr = transactions[index];
-                    return NewGraphicCard(texto: tr.title, preco: tr.value, time: tr.date);
+                    return NewGraphicCard(texto: tr.title, onlyId: tr.id ,preco: tr.value, time: tr.date, delete: deleteTransaction,);
         },
                      
       ),

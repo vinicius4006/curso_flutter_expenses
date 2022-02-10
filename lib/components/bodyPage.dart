@@ -9,7 +9,8 @@ class BodyPage extends StatelessWidget {
 
   final List<Transaction> transactions;
   final List<Transaction> recentTransaction;
-  BodyPage(this.transactions, this.recentTransaction);
+  final void Function(String) deleteTransaction;
+  BodyPage(this.transactions, this.recentTransaction, this.deleteTransaction);
  
 
   @override
@@ -21,7 +22,7 @@ class BodyPage extends StatelessWidget {
         Chart(recentTransaction),
         //GraphicCard(texto: "Gráfico",color: Colors.blueAccent,),
         //GraphicCard(texto: "Lista de Transações", color: Colors.grey,),
-        TransactionList(transactions),
+        TransactionList(transactions, deleteTransaction),
       ],
     );
   }

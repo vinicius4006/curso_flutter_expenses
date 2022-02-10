@@ -14,24 +14,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   //const MyHomePage({ Key? key }) : super(key: key);
 final List<Transaction>_transactions = [
-    Transaction(
-      id: "t0",
-      title: "Conta Antiga",
-      value: 400.0,
-      date: DateTime.now().subtract(Duration(days: 33)),
-    ),
-    Transaction(
-      id: "t1",
-      title: "Novo Tênis de Corrida",
-      value: 100.0,
-      date: DateTime.now().subtract(Duration(days: 2)),
-    ),
-    Transaction(
-      id: "t2",
-      title: "Internet",
-      value: 605.90,
-      date: DateTime.now().subtract(Duration(days: 4)),
-    ),
+    
     
   ];
   
@@ -44,12 +27,12 @@ final List<Transaction>_transactions = [
     }).toList();
   }
 
-   _addTransactions(String title, double value){
+   _addTransactions(String title, double value, DateTime date){
     final newTransaction = Transaction(
       id: Random().nextDouble().toString(), 
       title: title, 
       value: value, 
-      date: DateTime.now(),
+      date: date,
       
       );
     setState(() {
@@ -58,6 +41,12 @@ final List<Transaction>_transactions = [
 
     Navigator.of(context).pop();
     
+   }
+
+   _deleteTransaction(String id){
+     setState(() {
+       _transactions.removeWhere((tr) => tr.id == id);
+     });
    }
 
   _openTransactionFormModal(BuildContext context){
@@ -83,7 +72,7 @@ final List<Transaction>_transactions = [
             icon: Icon(Icons.add))
         ],
       ),
-      body: SingleChildScrollView(child: BodyPage(_transactions, _recentTransactions)),
+      body: SingleChildScrollView(child: BodyPage(_transactions, _recentTransactions, _deleteTransaction)),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _openTransactionFormModal(context), 
         child: Icon(Icons.add)),
