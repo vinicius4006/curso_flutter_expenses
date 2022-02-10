@@ -1,7 +1,7 @@
 # expenses
 
 Projeto de controle de despesas pessoais, desenvolvido através da Cod3r.
-![Alt text](assets\images\inicial.png?raw=true "form")
+![Alt text](assets\images\inicial.png "form")
 
 
 ## Getting Started
