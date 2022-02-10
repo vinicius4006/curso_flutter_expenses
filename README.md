@@ -1,10 +1,10 @@
 # expenses
 
-A new Flutter project.
+Projeto de controle de despesas pessoais, desenvolvido através da Cod3r.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Basta baixar o projeto e rodar na sua máquina através do flutter e do Android Studio ou iOS simulator.
 
 A few resources to get you started if this is your first Flutter project:
 
