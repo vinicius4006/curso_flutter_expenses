@@ -1,5 +1,7 @@
+import 'package:expenses/components/newGraphicCard.dart';
 import 'package:expenses/models/transaction.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import 'graphicCard.dart';
 
@@ -33,10 +35,11 @@ class TransactionList extends StatelessWidget {
           ),
         ],
       ) : ListView.builder(
+        reverse: true,
         itemCount: transactions.length,
         itemBuilder: (ctx, index){
           final tr = transactions[index];
-                    return GraphicCard(texto: tr.title, preco: tr.value,time: tr.date);
+                    return NewGraphicCard(texto: tr.title, preco: tr.value, time: tr.date);
         },
                      
       ),
