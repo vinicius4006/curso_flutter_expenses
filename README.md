@@ -2,7 +2,7 @@
 
 Projeto de controle de despesas pessoais, desenvolvido através da Cod3r.
 <p align="center">
-  <img width="460" height="300" src="https://github.com/vinicius4006/curso_flutter_expenses/blob/master/assets/images/inicial.png">
+  <img width="720" height="1280" src="https://github.com/vinicius4006/curso_flutter_expenses/blob/master/assets/images/inicial.png">
 </p>
 
 
