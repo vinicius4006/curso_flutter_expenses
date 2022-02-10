@@ -1,12 +1,20 @@
 # expenses
 
 Projeto de controle de despesas pessoais, desenvolvido através da Cod3r.
-![Alt text](assets\images\inicial.png "form")
+<p align="center">
+  <img width="240" height="427" src="https://github.com/vinicius4006/curso_flutter_expenses/blob/master/assets/images/inicial.png">
+  <img width="240" height="427" src="https://github.com/vinicius4006/curso_flutter_expenses/blob/master/assets/images/form.png">
+  <img width="240" height="427" src="https://github.com/vinicius4006/curso_flutter_expenses/blob/master/assets/images/result.png">
+</p>
+
+<p> As despesas registradas são semanais</p>
+<p> O quadro no início do App indica a porcentagem dos gastos ao decorrer da semana</p>
+<p> É possível excluir e escolher a data do dia em que o gasto foi realiazado</p>
 
 
 ## Getting Started
 
-Basta baixar o projeto e rodar na sua máquina através do flutter e do Android Studio ou iOS simulator.
+Basta baixar o projeto e rodar na sua máquina através do flutter no Android Studio ou iOS simulator.
 
 A few resources to get you started if this is your first Flutter project:
 
