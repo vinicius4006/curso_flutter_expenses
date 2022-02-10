@@ -7,6 +7,10 @@ Projeto de controle de despesas pessoais, desenvolvido através da Cod3r.
   <img width="240" height="427" src="https://github.com/vinicius4006/curso_flutter_expenses/blob/master/assets/images/result.png">
 </p>
 
+<p> As despesas registradas são semanais</p>
+<p> O quadro no início do App indica a porcentagem dos gastos ao decorrer da semana</p>
+<p> É possível excluir e escolher a data do dia em que o gasto foi realiazado</p>
+
 
 ## Getting Started
 
