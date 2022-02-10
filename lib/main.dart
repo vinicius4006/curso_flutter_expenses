@@ -20,6 +20,9 @@ class ExpensesApp extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
+            button: TextStyle(
+              fontWeight: FontWeight.bold
+            ),
           ),
           appBarTheme: AppBarTheme(
            titleTextStyle: TextStyle(

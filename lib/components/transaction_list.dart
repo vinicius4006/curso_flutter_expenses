@@ -35,8 +35,9 @@ class TransactionList extends StatelessWidget {
           ),
         ],
       ) : ListView.builder(
-        reverse: true,
+
         itemCount: transactions.length,
+        //reverse: transactions.length > 3,
         itemBuilder: (ctx, index){
           final tr = transactions[index];
                     return NewGraphicCard(texto: tr.title, preco: tr.value, time: tr.date);

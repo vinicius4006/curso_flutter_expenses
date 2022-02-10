@@ -57,7 +57,21 @@ class _TransactionFormState extends State<TransactionForm> {
                   ),
                 ),
               ),
-              
+              Container(
+                height: 70,
+                 margin: EdgeInsets.all(10),
+                child: Row(
+                  children: <Widget>[
+                  Text("Nenhum data selecionada!"),
+                  TextButton(
+                    onPressed: (){}, 
+                    child: Text(
+                      "Selecionar Data",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold
+                      ),))
+                ],),
+              ),
               ElevatedButton(
                child: Text("Nova Transação", style: TextStyle(
                 color: Colors.white,
