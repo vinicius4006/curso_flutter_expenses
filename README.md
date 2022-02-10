@@ -1,7 +1,7 @@
 # expenses
 
 Projeto de controle de despesas pessoais, desenvolvido através da Cod3r.
-![Alt text](assets\images\inicial.png?raw=true "form")
+[Form](https://github.com/vinicius4006/curso_flutter_expenses/blob/master/assets/images/inicial.png)
 
 
 ## Getting Started
