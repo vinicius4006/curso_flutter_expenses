@@ -11,7 +11,7 @@ Projeto de controle de despesas pessoais, desenvolvido através da Cod3r.
 <p> O quadro no início do App indica a porcentagem dos gastos ao decorrer da semana</p>
 <p> É possível excluir e escolher a data do dia em que o gasto foi realiazado</p>
 
-
+O importante é continuar caminhando, em algum momento você chega!
 ## Getting Started
 
 Basta baixar o projeto e rodar na sua máquina através do flutter no Android Studio ou iOS simulator.
