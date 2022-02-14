@@ -35,8 +35,15 @@ class NewGraphicCard extends StatelessWidget {
                         subtitle: Text(
                           DateFormat('d MMM y').format(time),
                         ),
-                        trailing: IconButton(onPressed: () => delete(onlyId), icon: Icon(Icons.delete_sweep_sharp, color: Colors.redAccent,)),
+                        trailing: MediaQuery.of(context).size.width > 480 ? 
+                        ElevatedButton.icon(
+                          onPressed: () => delete(onlyId),
+                           icon: Icon(Icons.delete_sweep_sharp), 
+                           label: Text("Excluir"))
+                        :IconButton(onPressed: () => delete(onlyId), icon: Icon(Icons.delete_sweep_sharp, color: Colors.redAccent,), ),
+                        
                       ),
+
                     );
   }
 }

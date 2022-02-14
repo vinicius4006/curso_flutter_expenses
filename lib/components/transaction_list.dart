@@ -19,8 +19,9 @@ class TransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Container(
-      height: 400,
-      child: transactions.isEmpty ? Column(
+      child: transactions.isEmpty ?  LayoutBuilder(builder: ((context, constraints) {
+
+        return Column(
         children: <Widget>[
           SizedBox(height: 20,),
           Text(
@@ -29,14 +30,17 @@ class TransactionList extends StatelessWidget {
           ),
           SizedBox(height: 20,),
           Container(
-            height: 200,
+            height: constraints.maxHeight * 0.6,
             child: Image.asset("assets/images/waiting.png",
             fit: BoxFit.cover,
             
             ),
           ),
         ],
-      ) : ListView.builder(
+      );
+      }))
+      
+      : ListView.builder(
 
         itemCount: transactions.length,
         //reverse: transactions.length > 3,

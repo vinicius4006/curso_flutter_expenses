@@ -58,21 +58,28 @@ final List<Transaction>_transactions = [
       );
   }
 
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+   
+      final appBar = AppBar(
         centerTitle: true,
         title: Text(
           "Despesas Pessoais",
           ),
         actions: <Widget>[
+          
           IconButton(
             onPressed: () => _openTransactionFormModal(context), 
             icon: Icon(Icons.add))
         ],
-      ),
-      body: SingleChildScrollView(child: BodyPage(_transactions, _recentTransactions, _deleteTransaction)),
+      );
+    final availabelHeight = MediaQuery.of(context).size.height - appBar.preferredSize.height - MediaQuery.of(context).padding.top;
+
+    return Scaffold(
+      appBar: appBar,
+      body: SingleChildScrollView(
+        child: BodyPage(_transactions, _recentTransactions, _deleteTransaction, availabelHeight)),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _openTransactionFormModal(context), 
         child: Icon(Icons.add)),
