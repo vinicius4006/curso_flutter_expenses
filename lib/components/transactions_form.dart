@@ -51,8 +51,10 @@ class _TransactionFormState extends State<TransactionForm> {
     return SingleChildScrollView(
       child: Card(
             elevation: 5,
-            child: Padding(
-              padding: EdgeInsets.only(
+            child: 
+            Padding(
+              padding: 
+              EdgeInsets.only(
                 top: 10,
                 right: 10,
                 left: 10,

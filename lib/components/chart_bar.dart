@@ -31,7 +31,7 @@ class ChartBar extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.grey,
-                      width: 1,
+                      width: 2,
                     ),
                     color: Color.fromRGBO(220, 220, 220, 1),
                     borderRadius: BorderRadius.circular(5),
@@ -39,7 +39,7 @@ class ChartBar extends StatelessWidget {
                 ),
                 Container(
                   width: 10,
-                  height: percentage <= 1 && percentage >= 0 ? 55*percentage : 0,
+                  height: percentage <= 1 && percentage >= 0 && MediaQuery.of(context).orientation != Orientation.landscape ? 68*percentage : 92*percentage,
                   decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(5),

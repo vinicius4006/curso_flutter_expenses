@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:expenses/components/bodyPage.dart';
@@ -80,7 +81,7 @@ final List<Transaction>_transactions = [
       appBar: appBar,
       body: SingleChildScrollView(
         child: BodyPage(_transactions, _recentTransactions, _deleteTransaction, availabelHeight)),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: Platform.isIOS ? Container() : FloatingActionButton(
         onPressed: () => _openTransactionFormModal(context), 
         child: Icon(Icons.add)),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

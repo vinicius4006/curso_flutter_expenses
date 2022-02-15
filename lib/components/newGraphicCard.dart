@@ -38,8 +38,8 @@ class NewGraphicCard extends StatelessWidget {
                         trailing: MediaQuery.of(context).size.width > 480 ? 
                         ElevatedButton.icon(
                           onPressed: () => delete(onlyId),
-                           icon: Icon(Icons.delete_sweep_sharp), 
-                           label: Text("Excluir"))
+                           icon: const Icon(Icons.delete_sweep_sharp), 
+                           label: const Text("Excluir"))
                         :IconButton(onPressed: () => delete(onlyId), icon: Icon(Icons.delete_sweep_sharp, color: Colors.redAccent,), ),
                         
                       ),

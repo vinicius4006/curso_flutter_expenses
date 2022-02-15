@@ -36,7 +36,7 @@ bool _showChart = false;
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Exibir Gráfico"),
-            Switch(value: _showChart, onChanged: (value){
+            Switch.adaptive(value: _showChart, onChanged: (value){
               setState(() {
                 _showChart = value;
               });
