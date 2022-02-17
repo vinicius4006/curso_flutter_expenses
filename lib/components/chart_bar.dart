@@ -10,6 +10,7 @@ class ChartBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(percentage);
     return LayoutBuilder(
       builder: (ctx, constraints){
         return Column(
@@ -39,7 +40,7 @@ class ChartBar extends StatelessWidget {
                 ),
                 Container(
                   width: 10,
-                  height: percentage <= 1 && percentage >= 0 && MediaQuery.of(context).orientation != Orientation.landscape ? 68*percentage : 92*percentage,
+                  height: MediaQuery.of(context).orientation != Orientation.landscape ? 68*percentage : 92*percentage,
                   decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(5),
