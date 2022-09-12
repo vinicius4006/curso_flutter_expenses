@@ -1,4 +1,4 @@
 # curso_flutter_expenses
 Projeto de Registros de Despesas
 
-Mude o branch para acessar!
+https://vimeo.com/748864968 -> Aplicativo de registra de despesas
